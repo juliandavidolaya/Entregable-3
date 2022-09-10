@@ -1,0 +1,45 @@
+import numpy as np 
+import matplotlib.pyplot as plt 
+  
+uniform1 = np.arange(-100, 100)
+uniform2 = np.arange(-100, 100)
+uniform3 = np.arange(-100, 100)
+uniform4 = np.arange(-100, 100)
+uniform5 = np.arange(-100, 100) 
+  
+normal1 = np.random.normal(size = 100)*30
+normal2 = np.random.normal(size = 100)*30
+normal3 = np.random.normal(size = 100)*30
+normal4 = np.random.normal(size = 100)*30
+normal5 = np.random.normal(size = 100)*30
+  
+fig, ax1 = plt.subplots( 5,  2,sharey=True)
+                              #figsize =(9, 4), sharey = True) 
+  
+#ax1.set_title('Uniform Distribution') 
+#ax1.set_ylabel('Observed values') 
+#ax1.violinplot(uniform) 
+
+#ax2.set_title('Normal Distribution') 
+#ax2.violinplot(normal) 
+  
+ax1[0, 0].violinplot(uniform1)
+#ax1[0, 0].set_title("1")
+ax1[0, 1].violinplot(normal1)
+#ax2[0, 1].set_title("2")
+ax1[1, 0].violinplot(uniform2)
+#ax1[1, 0].set_title("3")
+ax1[1, 1].violinplot(normal2)
+#ax2[1, 1].set_title("4")
+ax1[2, 0].violinplot(uniform3)
+#ax1[2, 0].set_title("5")
+ax1[2, 1].violinplot(normal3)
+#ax2[2, 1].set_title("6")
+ax1[3, 0].violinplot(uniform4)
+#ax1[3, 0].set_title("7")
+ax1[3, 1].violinplot(normal4)
+#ax2[3, 1].set_title("8")
+ax1[4, 0].violinplot(uniform5)
+#ax1[4, 0].set_title("9")
+ax1[4, 1].violinplot(normal5)
+#ax2[4, 1].set_title("10")
