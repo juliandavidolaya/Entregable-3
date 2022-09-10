@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+
+nombres = ['Carlos', 'Laura', 'Mario', 'Erika','Angie']
+alturas = [178, 155, 175, 180,166]
+pesos = [79, 52, 90, 99,56]
+
+fig , axes = plt.subplots() #subplots en una misma dirección
+
+axes.bar(nombres,alturas, color='b')
+axes.set_xlabel('Nombre')
+axes.set_ylabel('Estatura en Cm', color='b')
+
+twin_axes=axes.twinx()
+twin_axes.plot(nombres,alturas, 'r')
+twin_axes.set_ylabel('peso en Kg', color='r')
+
+plt.title('Datos de los estudiantes')
+
+plt.show()
