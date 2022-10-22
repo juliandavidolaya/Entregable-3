@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt 
+y=[] 
+x=[] 
+for i in range(10): 
+    y.append((i**4)+1) 
+    x.append(i)
+
+plt.plot(x,y) 
+plt.title("Ejemplo de cuadricula") 
+plt.legend() # agregar el legend al plot
+
+plt.grid(True) # poner grid en la grafica 
+plt.show()
