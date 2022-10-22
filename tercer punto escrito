@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+
+marca = ['BMW', 'Chrysler', 'GM', 'Audi','Jaguar','Ferrari','Tesla']
+torque = [750, 883, 655, 835,770,885,890] #Torque de los vehiculos en Nm
+pesos = [1600, 1300, 1500, 1125,1558,1700,1889] #Pesos de los vehiculos en Kg
+
+fig , axes = plt.subplots() #subplots en una misma dirección
+
+axes.bar(marca,torque, color='r')
+axes.set_xlabel('Marca del vehiculo')
+axes.set_ylabel('Torque en Nm', color='r')
+
+twin_axes=axes.twinx()
+twin_axes.plot(marca,torque, 'g')
+twin_axes.set_ylabel('peso en Kg', color='g')
+
+plt.title('Vehiculos del consecionario')
+
+plt.show()
